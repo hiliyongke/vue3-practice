@@ -1,20 +1,25 @@
 <template>
   <div id="nav">
-    <router-link v-for="(route, index) in routes" :key="index" replace :to="route.path">
+    <router-link
+      v-for="(route, index) in routes"
+      :key="index"
+      replace
+      :to="route.path"
+    >
       <span>{{ route.name }}</span>
-      <span v-if="index < routes.length - 1" style="margin: 12px;">|</span>
+      <span v-if="index < routes.length - 1" style="margin: 12px">|</span>
     </router-link>
   </div>
-  <router-view/>
+  <router-view />
 </template>
 
 <script>
-import { routes } from '@/router'
+import { routes } from "@/router";
 export default {
-  setup () {
-    return { routes: routes.slice(1) }
-  }
-}
+  setup() {
+    return { routes: routes.slice(1) };
+  },
+};
 </script>
 
 <style lang="scss">
@@ -46,7 +51,8 @@ export default {
   }
 }
 
-ul, ol {
+ul,
+ol {
   display: inline-block;
   li {
     font-size: 1.2em;

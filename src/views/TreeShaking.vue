@@ -5,14 +5,15 @@
 </template>
 
 <script>
-
 export default {
-  setup () {
+  setup() {
     return {
       list: [
-        { msg: '<a href="https://v3.cn.vuejs.org/guide/migration/global-api-treeshaking.html" target="_blank">https://v3.cn.vuejs.org/guide/migration/global-api-treeshaking.html</a>' }
-      ]
-    }
-  }
-}
+        {
+          msg: '<a href="https://v3.cn.vuejs.org/guide/migration/global-api-treeshaking.html" target="_blank">https://v3.cn.vuejs.org/guide/migration/global-api-treeshaking.html</a>',
+        },
+      ],
+    };
+  },
+};
 </script>
