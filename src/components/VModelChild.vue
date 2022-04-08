@@ -1,11 +1,21 @@
 <template>
-  <h3>123</h3>
+  <div style="border: 1px orange solid">
+    <input
+      type="text"
+      :value="modelValue"
+      @input="$emit('update:modelValue', $event.target.value)"
+    />
+    <br />
+    <input
+      type="text"
+      :value="text"
+      @input="$emit('update:text', $event.target.value)"
+    />
+  </div>
 </template>
-
 <script>
 export default {
-  setup () {
-    return {}
-  }
-}
+  //v-model冒号后面不写值，默认就是modelValue
+  props: ["modelValue", "text"],
+};
 </script>

@@ -11,6 +11,7 @@ export default {
   components: { EmitsChild },
   setup() {
     const event1 = () => {
+      debugger;
       console.log("父组件： event1");
     };
     const event2 = (...args) => {

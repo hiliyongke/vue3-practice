@@ -38,7 +38,7 @@ export default {
   line-height: 2;
   margin: 0 auto;
   flex-wrap: wrap;
-  max-width: 80vw;
+  // max-width: 80vw;
   font-size: 24px;
   user-select: none;
   justify-content: center;

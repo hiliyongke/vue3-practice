@@ -3,8 +3,10 @@
     <li v-for="item in list" :key="item.msg" v-html="item.msg" />
   </ol>
   <br />
-  <VModelChild v-model="childVal" />
-  <input v-model="inputVal" type="text" />
+  <VModelChild v-model="message1" v-model:text="message2" />
+  v-model:{{ message1 }}
+  <br />
+  v-model-text:{{ message2 }}
   <h4>{{ inputVal }}</h4>
 </template>
 
@@ -14,11 +16,11 @@ import VModelChild from "@/components/VModelChild";
 export default {
   components: { VModelChild },
   setup() {
-    const inputVal = ref("");
-    const childVal = ref("");
+    const message1 = ref("");
+    const message2 = ref("");
     return {
-      inputVal,
-      childVal,
+      message1,
+      message2,
       list: [
         {
           msg: "vue3.x v-model 指令增加了 :modelValue 用于指定子组件内部接受 props 的名字",
